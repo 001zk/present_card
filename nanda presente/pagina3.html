@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ff0000; /* Fundo vermelho */
+            /* overflow: hidden; */ /* Removendo para permitir a rolagem */
+            position: relative; /* Permitir posicionamento relativo dos corações */
+        }
+        .heart {
+            position: fixed; /* Corações fixos na tela */
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="%23fff" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/%3E%3C/svg%3E');
+            background-size: contain;
+            animation: heartAnimation 10s linear infinite; /* Adicionando animação mais lenta */
+            animation-delay: 0s; /* Iniciar imediatamente */
+        }
+
+        /* Definindo a animação */
+        @keyframes heartAnimation {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Estilo para a imagem */
+        .image-container {
+            position: absolute;
+            top: 50px; /* Ajusta a posição no topo */
+            left: 10px; /* Ajusta a posição no canto esquerdo */
+            z-index: 2; /* Coloca a imagem na frente dos corações */
+        }
+      /* Estilo para o texto sobre a imagem */
+      .text-over-image {
+          position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+          top: 50%; /* Posicionamento no meio verticalmente */
+          left: 50%; /* Posicionamento no meio horizontalmente */
+          transform: translate(-50%, -50%); /* Centralizando */
+          color: white; /* Cor do texto */
+          font-size: 18px; /* Tamanho da fonte */
+          text-align: center; /* Centralizando o texto */
+          width: 80%; /* Largura do texto */
+      }
+      /* Estilo para o título */
+      .title {
+          color: white;
+          font-size: 28px;
+          text-align: center;
+          margin-bottom: 20px; /* Adicionando espaço abaixo do título */
+          text-transform: uppercase;
+          letter-spacing: 2px;
+      }
+
+      /* Estilo para o destaque do título */
+      .title-highlight {
+          background-color: #ffffff;
+          color: #ff0000;
+          padding: 5px 10px;
+          border-radius: 10px;
+      }
+
+      /* Estilo para o botão */
+      .button {
+          display: block;
+          width: 100px;
+          margin: 20px auto;
+          padding: 10px;
+          background-color: #ffffff;
+          color: #ff0000;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+
+    </style>
+</head>
+<body>
+    <!-- Corações preenchendo o fundo -->
+    <div class="heart" style="top: 0; left: 10vw;"></div>
+    <div class="heart" style="top: 0; left: 50vw;"></div>
+    <div class="heart" style="top: 0; left: 90vw;"></div>
+    <div class="heart" style="top: 33vh; left: 25vw;"></div>
+    <div class="heart" style="top: 33vh; left: 75vw;"></div>
+    <div class="heart" style="top: 66vh; left: 50vw;"></div>
+
+    <!-- Segundo conjunto de corações -->
+    <div class="heart" style="top: 15vh; left: 20vw;"></div>
+    <div class="heart" style="top: 25vh; left: 70vw;"></div>
+    <div class="heart" style="top: 40vh; left: 40vw;"></div>
+    <div class="heart" style="top: 60vh; left: 80vw;"></div>
+    <div class="heart" style="top: 75vh; left: 10vw;"></div>
+    <div class="heart" style="top: 90vh; left: 60vw;"></div>
+
+    <!-- Terceiro conjunto de corações -->
+    <div class="heart" style="top: 5vh; left: 80vw;"></div>
+    <div class="heart" style="top: 10vh; left: 30vw;"></div>
+    <div class="heart" style="top: 45vh; left: 15vw;"></div>
+    <div class="heart" style="top: 50vh; left: 65vw;"></div>
+    <div class="heart" style="top: 85vh; left: 35vw;"></div>
+    <div class="heart" style="top: 95vh; left: 85vw;"></div>
+
+    <!-- Título centralizado -->
+    <div class="title">
+        <span class="title-highlight">TITULO SOBRE A PAGINA</span>
+    </div>
+
+    <!-- Adicionando a imagem -->
+    <div class="image-container">
+        <img src="https://i.ibb.co/YLjdDsv/IMG-20240408-WA0021.jpg" alt="última imagem" style="width: 300px;">
+        <!-- Adicionando o texto ao lado da imagem -->
+        <div class="text-over-image">
+           exemplo
+        </div>
+    </div>
+
+    <!-- Botão -->
+    <button class="button" onclick="window.location.href = 'pagina12.html';">Próxima</button> <!-- redirecione para a pagina desejada, caso qeira adicionar mais paginas é so copiar o codigo e colar e por ai vai -->
+</body>
+</html>
