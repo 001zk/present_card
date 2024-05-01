@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Envelope + Letter (Open/Close on Click)</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .btn-avancar {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,21 +31,29 @@
             <div class="envelope">
                 <div class="letter">
                     <div class="text">
-                        <strong>Dear Person.</strong>
+                        <strong>nandoca linda</strong>
                         <p>
-                            @Lzk001
+                          feliz aniversario nanda, obg por ser alguem tao incrivel na minha vida, eu te amo muito, sei que nao sou muito bom com presentes mas esse eu fiz de coração, continue sendo essa pessoa que tira cada sorriso bobo meu, te amo
                         </p>
                     </div>
                 </div>
             </div>
             <div class="heart"></div>
         </div>
+        <button class="btn-avancar" onclick="avancar()">Avançar</button>
     </div>
     <script>
         const envelope = document.querySelector('.envelope-wrapper');
         envelope.addEventListener('click', () => {
             envelope.classList.toggle('flap');
         });
+
+        function avancar() {
+            // Redirecionar para a segunda página
+            window.location.href = 'pagina2.html';
+        }
     </script>
+  
+  
 </body>
 </html>
